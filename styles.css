@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importação da fonte Montserrat do Google Fonts */
+
+
+/* Definição de variáveis de cores e gradientes usando a propriedade :root */
+:root {
+   --primary-color: #feaa5c;    /* Cor primária usada no gradiente 2 */
+   --secondary-color:#e14418;    /* Cor secundária usada no gradiente 2 */
+   --extra-ligth: #f3f4f6;      /* Cor extra clara utilizada em elementos de texto */
+   --white:#ffffff;  
+   --gradient-1: linear-gradient(to bottom right, #151515, #000000);  /* Gradiente 1 de cores */
+   --gradient-2: linear-gradient(
+     to bottom,
+     var(--primary-color),
+     var(--secondary-color)  /* Gradiente 2 de cores */
+   );
+
+   --max-width: 1200px;   /* Largura máxima da página */
+}
+
+/* Reset de estilos para todos os elementos */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}   
+
+/* Estilos para a seção container */
+.section_container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+/*  seção sobre mídia */
+.about_midia h2{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+video{
+  border-radius: 5%;
+}/* fim da seção sobre mídia */
+
+
+/* --------------------------------------------Estilos para o cabeçalho da seção ------------------------------------------------*/
+.section_header{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section_description{
+    max-width: 600px;
+    margin-inline: auto;
+    color: var(--extra-ligth);
+    text-align: center;
+    line-height: 1.75rem;
+}
+
+.btn{
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-image: var(--gradient-2);
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  box-shadow:5px 5px 10px rgb(0, 0, 0, 0.2);
+}
+
+.btn:hover{
+  transform: scale(1.1);
+}
+
+img{
+  width: 100%;
+  display: flex;
+}
+
+a{
+  text-decoration: none;
+}
+
+.logo{
+  display: inline-block;
+  padding: 10px 14px;
+  font-size: 1.5rem;
+  font-weight:700;
+  color: var(--white);
+  background-image: var(--gradient-2);
+  border-radius: 100%;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+}
+
+html,
+body{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  color: var(--white);
+  background-image: var(--gradient-1);
+}
+
+
+/*----------------------------------------inicio da seção da barra de navegação--------------------------------------------------*/
+nav{
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  z-index: 9;
+}
+
+.nav_bar{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-image: var(--gradient-1);
+}
+
+.nav_logo{
+  padding: 9px 12px;
+  font-size: 1.2rem;
+}
+
+.nav_bar a{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+.nav_menu_btn{
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav_links{
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-image: var(--gradient-2);
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.nav_links.open{
+  transform: translateY(0);
+}
+
+.nav_links a{
+  color:var(--white);
+  transition: 0.3s;
+}
+
+.nav_links a:hover{
+  color: var(--white);
+}
+
+.btn_large {
+  display: none;
+}/* ------------------------------------fim da seção da barra de navegação---------------------------------------------*/
+
+
+
+/* -------------------------------- inicioda seção do header-----------------------------------------------*/
+.header_container{
+  padding-top: 8rem;
+  display: grid;
+  gap: 2rem;
+  isolation: isolate;
+}
+
+.header_content{
+  text-align: center;
+}
+
+.header_content h1{
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#interface{
+  font-size: 5rem;
+}
+
+.header_content .section_description{
+  margin-bottom: 2rem;
+}
+
+.header_image{
+  position: relative;
+  isolation: isolate;
+  z-index: -1;
+}
+
+.header_image img{
+  max-width: 450px;
+  margin-inline: auto;
+  border-radius: 25rem;
+}
+
+.header_image::after{
+  position: absolute;
+  content: "GEREMY";
+  letter-spacing: 1.5rem;
+  opacity: .5;
+  right: 1rem;
+  top: 50%;
+  transform: translate(50%, -50%) rotate(90deg);
+}
+
+.about_container{
+  display: grid;
+  gap: 2rem;
+}/* ---------------------------------------fim da seção do header-------------------------------------------------*/
+
+
+
+/* ---------------------------------------inicioda seção sobre-------------------------------------------------*/
+.about_midia{
+  position: relative;
+  isolation: isolate;
+  margin: auto;
+}
+
+.about_content .section_description{
+  margin-bottom: 2rem;
+}/* ---------------------------------------fim da seção do sobre-------------------------------------------------*/
+
+
+
+/* ---------------------------------------inicio da seção dos serviços-------------------------------------------------*/
+.service_grid{
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.service_card{
+  padding: 2rem 1rem;
+  text-align: center;
+  background-image: var(--gradient-2);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service_card span{
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.section_header h2{
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.service_card p{
+  color: var(--extra-ligth);
+  line-height: 2rem;
+}/* ---------------------------------------fim da seção dos serviços-------------------------------------------------*/
+
+
+/* ---------------------------------------inicio da seção dos projecto portfolio, imagem dos projectos-------------------------------------------------*/
+.portfolio_grid{
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.portfolio_card{
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio_card img{
+  transition: .5s;
+}
+
+.portfolio_card:hover img{
+  transform: scale(1.1);
+}
+
+.portfolio_banner{
+  margin-top: 2rem;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+  background-image: var(--gradient-2);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio_banner_card span{
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.portfolio_banner_card h4{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.portfolio_banner_card p{
+  font-weight: 500;
+}/* ---------------------------------------fim da seção do header-------------------------------------------------*/
+
+
+
+/* ---------------------------------------inicio da seção dos contacto-------------------------------------------------*/
+.contact_container{
+  text-align: center;
+}
+
+.contact_container .logo{
+  margin-bottom: 1rem;
+}
+
+.contact_socials{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact_socials a{
+  padding: 7px 10px;
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.contact_socials a:hover{
+  background: var(--gradient-2);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* tabela--------------*/
+
+#tabela_itens{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#tabela_abilidades{
+  background: var(--gradient-2);
+}/* ---------------------------------------fim da seção dos contactos-------------------------------------------------*/
+
+
+
+/* --------formulario--------*/
+section .formulario{
+  padding: 80px 4%;
+}
+
+.formulario h2{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+form{
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input, form textarea{
+  width: 100%;
+  background-image: var(--gradient-2);
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+form textarea{
+  resize: none;
+  max-height: 200px;
+}
+
+form .btn-enviar{
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .btn-enviar input[type=submit]{
+  width: 120px;
+  color: var(--white);
+  font-weight: 700;
+  cursor:pointer;
+  transition: .2s;
+}/* --fim dos formulario-------*/
+
+.footer{
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--extra-ligth);
+  text-align: center;
+}
+
+
+
+/* Estilos para telas maiores que 576px */
+@media (width > 576px){
+  .service_grid{
+    grid-template-columns: repeat(2, 1fr);/* Define 2 colunas iguais */
+
+  }
+
+  .portfolio_grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio_banner{
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+}
+
+/* Estilos para telas maiores que 768px */
+@media (width > 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav_bar{
+    padding: 0;
+    background-image: none;
+  }
+
+  .nav_menu_btn{
+    display: none;
+  }
+
+  .nav_links{
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-image: none;
+  }
+
+  .nav_links a:hover{
+    color: var(--secondary-color);/* Altera a cor ao passar o mouse */
+  }
+
+  .nav_links li:last-child{
+    display: none;
+  }
+
+  .btn_large{
+    display: flex;
+  }
+
+  .header_container{
+    padding-top: 5rem;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+
+  .header_image{
+    grid-area: 1/3/2/5;
+  }
+
+  .header_image img{
+    margin-inline-start: unset;
+  }
+
+  .header_content{
+    grid-area: 1/1/2/4;
+    text-align: left;
+  }
+
+  .header_content h1{
+    font-size: 6rem;
+    line-height: 6rem;
+    text-align: left;
+  }
+
+  .header_content .section_description{
+    text-align: left;
+    margin-inline-start: unset;
+  }
+
+  .about_container{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .about_content,
+  .about_content :is(.section_header, .section_description){
+    text-align: left;
+  }
+
+  .service_grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio_container :is(.section_header, .section_description){
+    text-align: left;
+    margin-inline-start: unset;
+  }
+
+  .portfolio_grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio_banner{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
